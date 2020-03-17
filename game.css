@@ -7,11 +7,11 @@
     float: left;
     border: 1px dashed white;
     padding: 30px;
-    padding-left: 60px;
+    text-align: center;
     font-style: oblique;
     font-size: 30px;
     font-weight: bold;
-    width: 60px;
+    width: 20%;
     color: white;
     background-color: green;
 }
@@ -19,9 +19,9 @@
     float: left;
     border: 1px dashed darkgray;
     padding: 30px;
-    padding-left: 60px;
+    text-align: center;
     font-size: 30px;
-    width:60px;
+    width:20%;
     background-color: lightgrey;
 }
 .divGRow{
