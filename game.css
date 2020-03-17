@@ -6,10 +6,10 @@
 .divGChild{
     float: left;
     border: 1px dashed white;
-    padding: 12px;
-    padding-left: 14px;
+    padding: 30px;
+    padding-left: 60px;
     font-style: oblique;
-    font-size: larger;
+    font-size: 30px;
     font-weight: bold;
     width: 60px;
     color: white;
@@ -18,9 +18,9 @@
 .divGChildEmpty{
     float: left;
     border: 1px dashed darkgray;
-    padding: 12px;
-	padding-left: 14px;
-    font-size: larger;
+    padding: 30px;
+    padding-left: 60px;
+    font-size: 30px;
     width:60px;
     background-color: lightgrey;
 }
