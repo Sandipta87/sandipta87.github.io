@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "validate-form-controls-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/validateFormControls/ValidateFormControlsWebPart.js",
+          "manifest": "./src/webparts/validateFormControls/ValidateFormControlsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ValidateFormControlsWebPartStrings": "lib/webparts/validateFormControls/loc/{locale}.js"
+  }
+}
