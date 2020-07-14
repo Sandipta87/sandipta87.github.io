@@ -41,7 +41,6 @@ function bindClickEvent(cnt)
                     if(moveOption != '' && targetOptionVal.trim() == "&nbsp;")
                     {
                         moveTheBlock(cntVal,cntId,targetOptionId);
-                        
                     }
                 }
             }
@@ -53,9 +52,10 @@ function bindClickEvent(cnt)
 function moveTheBlock(sourceVal,sourceCnt,targetCnt)
 {
     intMove = intMove+1;
-    var strMsghtml = "<div id='divSucessMsg' class='divSucessMsg'>No. of moves taken so far: <span class='spTimeMsg'>"+intMove+"</span>!</div>";
+    var strMsghtml = "No. of moves taken so far: <span class='spTimeMsg'>"+intMove+"</span>";
     $("#divGameStatusMsg").html(strMsghtml);
-
+    $("#divGameStatusMsg").addClass('info');
+    
     $(sourceCnt).html("&nbsp;");
     $(sourceCnt).addClass("divGChildEmpty");
     $(sourceCnt).removeClass("divGChild");
@@ -80,8 +80,9 @@ function checkGameStatus()
     {
         var strMsghtml="";
         spTimeMsg = intMove;
-        strMsghtml = "<div id='divSucessMsg' class='divSucessMsg'>Congratulations, it took <span class='spTimeMsg'>"+intMove+"</span> Moves!</div>";
+        strMsghtml = "Congratulations, you made it. It took only <span class='spTimeMsg'>"+intMove+"</span> Moves";
         $("#divGameStatusMsg").html(strMsghtml);
+        $("#divGameStatusMsg").addClass('success');
     }
 } 
 
@@ -119,32 +120,33 @@ function getRandNums()
 }
 function createBoard()
 {
-    var strHtml = '<div id="divGR1" class="divGRow">';
-    strHtml +='<div id="divG1" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG2" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG3" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG4" class="divGChild" onclick="bindClickEvent(this);"></div>';
+    var strHtml = '<div id="divGR1" class="divGRow row">';
+    strHtml +='<div id="divG1" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG2" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG3" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG4" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
     strHtml +='</div>';
-    strHtml +='<div id="divGR2" class="divGRow">';
-    strHtml +='<div id="divG5" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG6" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG7" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG8" class="divGChild" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divGR2" class="divGRow row">';
+    strHtml +='<div id="divG5" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG6" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG7" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG8" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
     strHtml +='</div>';
-    strHtml +='<div id="divGR3" class="divGRow">';
-    strHtml +='<div id="divG9" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG10" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG11" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG12" class="divGChild" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divGR3" class="divGRow row">';
+    strHtml +='<div id="divG9" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG10" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG11" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG12" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
     strHtml +='</div>';
-    strHtml +='<div id="divGR4" class="divGRow">';
-    strHtml +='<div id="divG13" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG14" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG15" class="divGChild" onclick="bindClickEvent(this);"></div>';
-    strHtml +='<div id="divG16" class="divGChildEmpty" onclick="bindClickEvent(this);">&nbsp;</div>';
+    strHtml +='<div id="divGR4" class="divGRow row">';
+    strHtml +='<div id="divG13" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG14" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG15" class="divGChild col-sm" onclick="bindClickEvent(this);"></div>';
+    strHtml +='<div id="divG16" class="divGChildEmpty col-sm" onclick="bindClickEvent(this);">&nbsp;</div>';
     strHtml +='</div>';
     intMove = 0;
-    $("#divGameStatusMsg").html("");
+    $("#divGameStatusMsg").html("Can you be able to arrange below Numbers from 1 to 15?");
+    $("#divGameStatusMsg").addClass('info');
     numArry =[];
     $('#divGameBoard').html(strHtml);
 }

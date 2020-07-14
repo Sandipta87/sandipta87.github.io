@@ -3,9 +3,22 @@
         <script src="jquery.min.js"></script>
         <script src="game.js"></script>
         <link rel="stylesheet" type="text/css" href="game.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     </head>
-    <div id="divGameMsg" class="divGameMsg">Arrange numbers 1 - 15</div>    
-    <div id="divGameBoard" class="divGameBoard"></div>
-    <div id="divGameStatusMsg" class="divGameStatusMsg"></div>
-    <div class="divRestart" onclick="setGame();">Start a new game</div>
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container-fluid">
+            <span class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              <strong>Arrange Numbers</strong>
+            </span>
+            <div class="divRestart navbar-brand d-flex align-items-center rounded bg-purple p-2 p-md-3" onclick="setGame();">New game</div>
+           </div>
+        </div>
+    </header>
+    <div id="divGameStatusMsg" class="divGameStatusMsg container container-sm p-2 p-md-3"></div>
+    <div id="divGameBoard" class="divGameBoard container container-sm rounded bg-dark p-4 p-md-5"></div>
+    
+</body>
 </html>
